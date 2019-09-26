@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+xmlns:tabview="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTabView.XForms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="CrewPocket.library">
+    <ContentPage.Content>
+        <tabview:SfTabView x:Name="tabView" TabItemTapped="itemChanged" VisibleHeaderCount="3" TabHeaderPosition="Bottom">
+            <tabview:SfTabView.Items>
+                <tabview:SfTabItem ClassId="1" FontIconFontColor="Orange" SelectionColor="Orange" TitleFontColor="Orange" TitleFontSize="30" Title="&#xf02d;" TitleFontFamily="{StaticResource FontAwesomeSolid}"/>
+                <tabview:SfTabItem ClassId="2"  FontIconFontColor="Orange" SelectionColor="Orange" TitleFontColor="Orange" TitleFontSize="30" Title="&#xf15b;" TitleFontFamily="{StaticResource FontAwesomeSolid}"/>
+                <tabview:SfTabItem ClassId="3" FontIconFontColor="Orange" SelectionColor="Orange" TitleFontColor="Orange" TitleFontSize="30" Title="&#xf03d;" TitleFontFamily="{StaticResource FontAwesomeSolid}"/>
+            </tabview:SfTabView.Items>
+        </tabview:SfTabView>
+    </ContentPage.Content>
+</ContentPage>
