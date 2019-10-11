@@ -7,11 +7,51 @@ xmlns:tabview="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTab
              mc:Ignorable="d"
              x:Class="CrewPocket.library">
     <ContentPage.Content>
-        <tabview:SfTabView x:Name="tabView" TabItemTapped="itemChanged" VisibleHeaderCount="3" TabHeaderPosition="Bottom">
-            <tabview:SfTabView.Items>
-                <tabview:SfTabItem ClassId="1" FontIconFontColor="Orange" SelectionColor="Orange" TitleFontColor="Orange" TitleFontSize="30" Title="&#xf02d;" TitleFontFamily="{StaticResource FontAwesomeSolid}"/>
-                <tabview:SfTabItem ClassId="2"  FontIconFontColor="Orange" SelectionColor="Orange" TitleFontColor="Orange" TitleFontSize="30" Title="&#xf15b;" TitleFontFamily="{StaticResource FontAwesomeSolid}"/>
-                <tabview:SfTabItem ClassId="3" FontIconFontColor="Orange" SelectionColor="Orange" TitleFontColor="Orange" TitleFontSize="30" Title="&#xf03d;" TitleFontFamily="{StaticResource FontAwesomeSolid}"/>
+        
+        <tabview:SfTabView x:Name="tabView" BackgroundColor="White" TabItemTapped="itemChanged" VisibleHeaderCount="3" TabHeaderPosition="Bottom">
+            <tabview:SfTabView.SelectionIndicatorSettings>
+                <tabview:SelectionIndicatorSettings Color="#FF5722"/>
+            </tabview:SfTabView.SelectionIndicatorSettings>
+                <tabview:SfTabView.Items>
+                <tabview:SfTabItem  FontIconFontColor="#FF5722" SelectionColor="#FF5722" TitleFontColor="#FF5722" TitleFontSize="30" Title="&#xf02d;" TitleFontFamily="{StaticResource FontAwesomeSolid}">
+                    <tabview:SfTabItem.Content>
+                        <ListView x:Name="books" RowHeight="85">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <Grid>
+                                            <Label  Grid.Row="0" HorizontalOptions="Start" Text="{Binding Title}" TextColor="Orange" FontSize="Default"/>
+                                            <Label  Grid.Row="1" HorizontalOptions="Start" Text="{Binding Publisher}" FontSize="Default"/>
+                                            <Label  Grid.Row="2" HorizontalOptions="Start" Text="{Binding DateExposure}" FontSize="Default"/>
+                                            <Label  Grid.Row="0" HorizontalOptions="End" Text="&#xf06e;" FontSize="Default" TextColor="SkyBlue" Margin="0,10,10,0">
+                                                <Label.FontFamily>
+                                                    <OnPlatform 
+                                                      x:TypeArguments="x:String"
+                                                      Android="Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid" 
+                                                      iOS="Font Awesome 5 Free" 
+                                                      WinPhone="Assets/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free"
+                                                    />
+                                                </Label.FontFamily>
+                                            </Label>
+                                            <Label  Grid.Row="1" HorizontalOptions="End" Text="&#xf0c2;" FontSize="Default" TextColor="Orange"  Margin="0,10,10,0">
+                                                <Label.FontFamily>
+                                                    <OnPlatform 
+                                                      x:TypeArguments="x:String"
+                                                      Android="Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid" 
+                                                      iOS="Font Awesome 5 Free" 
+                                                      WinPhone="Assets/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free"
+                                                    />
+                                                </Label.FontFamily>
+                                            </Label>
+                                        </Grid>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </tabview:SfTabItem.Content>
+                </tabview:SfTabItem>
+                <tabview:SfTabItem ClassId="2"  FontIconFontColor="#FF5722" SelectionColor="#FF5722" TitleFontColor="#FF5722" TitleFontSize="30" Title="&#xf15b;" TitleFontFamily="{StaticResource FontAwesomeSolid}"/>
+                <tabview:SfTabItem ClassId="3" FontIconFontColor="#FF5722" SelectionColor="#FF5722" TitleFontColor="#FF5722" TitleFontSize="30" Title="&#xf03d;" TitleFontFamily="{StaticResource FontAwesomeSolid}"/>
             </tabview:SfTabView.Items>
         </tabview:SfTabView>
     </ContentPage.Content>

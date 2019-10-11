@@ -18,7 +18,7 @@ xmlns:navigationdrawer="clr-namespace:Syncfusion.SfNavigationDrawer.XForms;assem
                 <ColumnDefinition/>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <Button Text="&#xf0c9;" Grid.Column="0" Clicked="HamburgerButtonClicked"   BackgroundColor="#ff3300" HorizontalOptions="Start" FontSize="30" TextColor="White" >
+            <Button Text="&#xf0c9;" Grid.Column="0" Clicked="HamburgerButtonClicked"   BackgroundColor="#FF5722" HorizontalOptions="Start" FontSize="30" TextColor="White" >
                 <Button.FontFamily>
                     <OnPlatform 
                         x:TypeArguments="x:String"
@@ -28,7 +28,7 @@ xmlns:navigationdrawer="clr-namespace:Syncfusion.SfNavigationDrawer.XForms;assem
                         />
                 </Button.FontFamily>
             </Button>
-            <Button Text="&#xf2f5;" Grid.Column="1" Clicked="LogOutButtonClicked"  FontFamily="{StaticResource FontAwesomeSolid}" BackgroundColor="#ff3300" FontSize="30" TextColor="White" HorizontalOptions="End">
+            <Button Text="&#xf2f5;" Grid.Column="1" Clicked="LogOutButtonClicked"  FontFamily="{StaticResource FontAwesomeSolid}" BackgroundColor="#FF5722" FontSize="30" TextColor="White" HorizontalOptions="End">
                 <Button.FontFamily>
                     <OnPlatform 
                         x:TypeArguments="x:String"
@@ -64,7 +64,7 @@ xmlns:navigationdrawer="clr-namespace:Syncfusion.SfNavigationDrawer.XForms;assem
                 </ScrollView>
                 <ScrollView  Orientation="Horizontal" Margin="0,-60,0,0" Grid.Row="1" >
                     <Grid >
-                        <Button BackgroundColor="White" Grid.Row="1" Grid.Column="0"  VerticalOptions="End" Text="&#xf518;" FontSize="30" HeightRequest="50" TextColor="Orange" FontFamily="{StaticResource  FontAwesomeSolid}" Clicked="LibraryButtonClicked">
+                        <Button BackgroundColor="White" Grid.Row="1" Grid.Column="0"  VerticalOptions="End" Text="&#xf518;" FontSize="30" HeightRequest="50" TextColor="#FF5722" FontFamily="{StaticResource  FontAwesomeSolid}" Clicked="LibraryButtonClicked">
                             <Button.FontFamily>
                                 <OnPlatform 
                         x:TypeArguments="x:String"
@@ -74,7 +74,7 @@ xmlns:navigationdrawer="clr-namespace:Syncfusion.SfNavigationDrawer.XForms;assem
                         />
                             </Button.FontFamily>
                         </Button>
-                        <Button BackgroundColor="White" Grid.Row="1" Grid.Column="1" VerticalOptions="End" Text="&#xf15b;" FontSize="30" HeightRequest="50" TextColor="Orange" FontFamily="{StaticResource  FontAwesomeSolid}" >
+                        <Button BackgroundColor="White" Grid.Row="1" Grid.Column="1" VerticalOptions="End" Text="&#xf15b;" FontSize="30" HeightRequest="50" TextColor="#FF5722" FontFamily="{StaticResource  FontAwesomeSolid}" >
                             <Button.FontFamily>
                                 <OnPlatform 
                         x:TypeArguments="x:String"
@@ -84,7 +84,7 @@ xmlns:navigationdrawer="clr-namespace:Syncfusion.SfNavigationDrawer.XForms;assem
                         />
                             </Button.FontFamily>
                         </Button>
-                        <Button BackgroundColor="White" Grid.Row="1" Grid.Column="2" VerticalOptions="End" Text="&#xf559;" FontSize="30" HeightRequest="50" TextColor="Orange" FontFamily="{StaticResource  FontAwesomeSolid}">
+                        <Button BackgroundColor="White" Grid.Row="1" Grid.Column="2" VerticalOptions="End" Text="&#xf559;" FontSize="30" HeightRequest="50" TextColor="#FF5722" FontFamily="{StaticResource  FontAwesomeSolid}">
                             <Button.FontFamily>
                                 <OnPlatform 
                         x:TypeArguments="x:String"
@@ -94,7 +94,7 @@ xmlns:navigationdrawer="clr-namespace:Syncfusion.SfNavigationDrawer.XForms;assem
                         />
                             </Button.FontFamily>
                         </Button>
-                        <Button BackgroundColor="White" Grid.Row="1" Grid.Column="3" VerticalOptions="End" Text="&#xf19d;" FontSize="30" HeightRequest="50" TextColor="Orange" FontFamily="{StaticResource  FontAwesomeSolid}">
+                        <Button BackgroundColor="White" Grid.Row="1" Grid.Column="3" VerticalOptions="End" Text="&#xf19d;" FontSize="30" HeightRequest="50" TextColor="#FF5722" FontFamily="{StaticResource  FontAwesomeSolid}">
                             <Button.FontFamily>
                                 <OnPlatform 
                         x:TypeArguments="x:String"
@@ -104,7 +104,7 @@ xmlns:navigationdrawer="clr-namespace:Syncfusion.SfNavigationDrawer.XForms;assem
                         />
                             </Button.FontFamily>
                         </Button>
-                        <Button BackgroundColor="White" Grid.Row="1" Grid.Column="4" VerticalOptions="End" Text="&#xf086;" FontSize="30" HeightRequest="50" TextColor="Orange" FontFamily="{StaticResource  FontAwesomeSolid}">
+                        <Button BackgroundColor="White" Grid.Row="1" Grid.Column="4" VerticalOptions="End" Text="&#xf086;" FontSize="30" HeightRequest="50" TextColor="#FF5722" FontFamily="{StaticResource  FontAwesomeSolid}">
                             <Button.FontFamily>
                                 <OnPlatform 
                         x:TypeArguments="x:String"
