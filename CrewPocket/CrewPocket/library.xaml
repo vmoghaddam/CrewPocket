@@ -20,7 +20,7 @@ xmlns:tabview="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTab
                                 <DataTemplate>
                                     <ViewCell>
                                         <Grid>
-                                            <Label  Grid.Row="0" HorizontalOptions="Start" Text="{Binding Title}" TextColor="Orange" FontSize="Default"/>
+                                            <Label  Margin="0,0,20,0" Grid.Row="0" HorizontalOptions="Start" Text="{Binding Title}" TextColor="Orange" FontSize="Default"/>
                                             <Label  Grid.Row="1" HorizontalOptions="Start" Text="{Binding Publisher}" FontSize="Default"/>
                                             <Label  Grid.Row="2" HorizontalOptions="Start" Text="{Binding DateExposure}" FontSize="Default"/>
                                             <Label  Grid.Row="0" HorizontalOptions="End" Text="&#xf06e;" FontSize="Default" TextColor="SkyBlue" Margin="0,10,10,0">
@@ -50,8 +50,85 @@ xmlns:tabview="clr-namespace:Syncfusion.XForms.TabView;assembly=Syncfusion.SfTab
                         </ListView>
                     </tabview:SfTabItem.Content>
                 </tabview:SfTabItem>
-                <tabview:SfTabItem ClassId="2"  FontIconFontColor="#FF5722" SelectionColor="#FF5722" TitleFontColor="#FF5722" TitleFontSize="30" Title="&#xf15b;" TitleFontFamily="{StaticResource FontAwesomeSolid}"/>
-                <tabview:SfTabItem ClassId="3" FontIconFontColor="#FF5722" SelectionColor="#FF5722" TitleFontColor="#FF5722" TitleFontSize="30" Title="&#xf03d;" TitleFontFamily="{StaticResource FontAwesomeSolid}"/>
+                <tabview:SfTabItem FontIconFontColor="#FF5722" SelectionColor="#FF5722" TitleFontColor="#FF5722" TitleFontSize="30" Title="&#xf15b;" TitleFontFamily="{StaticResource FontAwesomeSolid}">
+                    <tabview:SfTabItem.Content>
+                        <ListView x:Name="papers" RowHeight="90">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout>
+                                            <Grid>
+                                                <Label LineHeight="200" Margin="0,0,20,0"  HeightRequest="100" Grid.Row="0" HorizontalOptions="Start" Text="{Binding Title}" TextColor="Orange" FontSize="Default"/>
+                                                <Label LineHeight="100" Grid.Row="1" HorizontalOptions="Start" Text="{Binding Authors}" FontSize="Default"/>
+                                                <Label LineHeight="200" Grid.Row="2" HorizontalOptions="Start" Text="{Binding DateExposure}" FontSize="Default"/>
+                                                <Label LineHeight="200" Grid.Row="0" HorizontalOptions="End" Text="&#xf06e;" FontSize="Default" TextColor="SkyBlue" Margin="0,10,10,0">
+                                                    <Label.FontFamily>
+                                                        <OnPlatform 
+                                                      x:TypeArguments="x:String"
+                                                      Android="Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid" 
+                                                      iOS="Font Awesome 5 Free" 
+                                                      WinPhone="Assets/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free"
+                                                    />
+                                                    </Label.FontFamily>
+                                                </Label>
+                                                <Label  Grid.Row="1" HorizontalOptions="End" Text="&#xf0c2;" FontSize="Default" TextColor="Orange"  Margin="0,10,10,0">
+                                                    <Label.FontFamily>
+                                                        <OnPlatform 
+                                                      x:TypeArguments="x:String"
+                                                      Android="Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid" 
+                                                      iOS="Font Awesome 5 Free" 
+                                                      WinPhone="Assets/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free"
+                                                    />
+                                                    </Label.FontFamily>
+                                                </Label>
+                                            </Grid>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </tabview:SfTabItem.Content>
+                </tabview:SfTabItem>
+                <tabview:SfTabItem FontIconFontColor="#FF5722" SelectionColor="#FF5722" TitleFontColor="#FF5722" TitleFontSize="30" Title="&#xf03d;" TitleFontFamily="{StaticResource FontAwesomeSolid}">
+                    <tabview:SfTabItem.Content>
+                        <ListView x:Name="videos" RowHeight="90">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout>
+                                            <Grid>
+                                                <Label LineHeight="200" Margin="0,0,20,0"  Grid.Row="0" HorizontalOptions="Start" Text="{Binding Title}" TextColor="Orange" FontSize="Default"/>
+                                                <Label LineHeight="200" Margin="0,0,20,0"  Grid.Row="1" HorizontalOptions="Start" Text="{Binding Authors}" FontSize="Default"/>
+                                                <Label LineHeight="200" Grid.Row="2" HorizontalOptions="Start" Text="{Binding Publisher}" FontSize="Default"/>
+                                                <Label LineHeight="200" Grid.Row="3" HorizontalOptions="Start" Text="{Binding DateExposure}" FontSize="Default"/>
+                                                <Label LineHeight="200" Grid.Row="0" HorizontalOptions="End" Text="&#xf06e;" FontSize="Default" TextColor="SkyBlue" Margin="0,6,10,0">
+                                                    <Label.FontFamily>
+                                                        <OnPlatform 
+                                                      x:TypeArguments="x:String"
+                                                      Android="Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid" 
+                                                      iOS="Font Awesome 5 Free" 
+                                                      WinPhone="Assets/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free"
+                                                    />
+                                                    </Label.FontFamily>
+                                                </Label>
+                                                <Label LineHeight="200" Grid.Row="1" HorizontalOptions="End" Text="&#xf0c2;" FontSize="Default" TextColor="Orange"  Margin="0,6,10,0">
+                                                    <Label.FontFamily>
+                                                        <OnPlatform 
+                                                      x:TypeArguments="x:String"
+                                                      Android="Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free Solid" 
+                                                      iOS="Font Awesome 5 Free" 
+                                                      WinPhone="Assets/Font Awesome 5 Free-Solid-900.otf#Font Awesome 5 Free"
+                                                    />
+                                                    </Label.FontFamily>
+                                                </Label>
+                                            </Grid>
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </tabview:SfTabItem.Content>
+                </tabview:SfTabItem>
             </tabview:SfTabView.Items>
         </tabview:SfTabView>
     </ContentPage.Content>

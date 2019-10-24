@@ -16,7 +16,8 @@ namespace CrewPocket
 
 
         public new List<Book> Books { get; set; }
-
+        public new List<Video> Videos { get; set; }
+        public new List<Paper> Papers { get; set; }
         public library()
         {
             InitializeComponent();
@@ -39,10 +40,15 @@ namespace CrewPocket
         {
 
             base.OnAppearing();
-            var url = "http://apig.epapocket.ir/odata/employees/library/" + User.Id + "/83";
-            Books = await _restService.GetBooksAsync(GenerateRequestUri(url));
+            var book = "http://apig.epapocket.ir/odata/employees/library/" + User.Id + "/83";
+            Books = await _restService.GetBooksAsync(GenerateRequestUri(book));
             books.ItemsSource = Books;
-
+            var video = "http://apig.epapocket.ir/odata/employees/library/" + User.Id + "/85";
+            Videos = await _restService.GetVideosAsync(GenerateRequestUri(video));
+            videos.ItemsSource = Videos;
+            var paper = "http://apig.epapocket.ir/odata/employees/library/" + User.Id + "/84";
+            Papers = await _restService.GetPapersAsync(GenerateRequestUri(paper));
+            papers.ItemsSource = Papers;
         }
 
 
